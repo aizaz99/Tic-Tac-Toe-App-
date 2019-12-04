@@ -7,6 +7,13 @@ board = ["-","-","-","-","-","-","-","-","-"]
 #If game is still going
 game_still_going = True 
 
+#Who won? or Tie?
+winner = None
+
+#Whos turn is iter
+current_player = "X"
+
+
 def display_board():
   print(board[0]+ "|" + board[1]+ "|" + board[2])
   print(board[3]+ "|" + board[4]+ "|" + board[5])
@@ -28,7 +35,7 @@ def play_game():
    flip_player()
 
 
-def handle_turn():
+def handle_turn(player):
   position = input(" Choose a position from 1 - 9: ")
   position = int(position) -1 #For Getting -1 cuz array starts from 0
   board[position] = "X"
