@@ -28,10 +28,12 @@ def play_game():
 
   while game_still_going:
 
+    #handle single turn of arbitary player
    handle_turn(current_player)
-
+  
+  #Check if the game is over 
    check_if_game_over()
-
+   #Flip the other player
    flip_player()
 
   #The game has ended
@@ -40,7 +42,7 @@ def play_game():
   elif winner == None:
     print("Tie.")
 
-
+#Handle turn of arbitary player
 def handle_turn(player):
   position = input(" Choose a position from 1 - 9: ")
   position = int(position) -1 #For Getting -1 cuz array starts from 0
