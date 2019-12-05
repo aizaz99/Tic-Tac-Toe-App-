@@ -56,10 +56,23 @@ def check_if_game_over():
 
 
 def check_if_win():
+
   #checkrows
+  row_winer = check_rows()
+
   #checkcolumns
+  column_winner = check_columns()
   #checkdiagnalos
+  diagnal_winner = check_diagnals()
   return 
+
+def check_rows():
+  return
+def check_columns():
+  return
+def check_diagnals():
+  return
+
 
 def check_if_tie():
   return 
