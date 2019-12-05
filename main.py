@@ -44,7 +44,14 @@ def play_game():
 
 #Handle turn of arbitary player
 def handle_turn(player):
+
+  print(player + "'s turn.")
   position = input(" Choose a position from 1 - 9: ")
+
+
+  if position not in ["1","2", "3","4","5","6","7","8","9"]:
+    position = input(" Invalid,  Choose a position from 1 - 9: ")
+    
   position = int(position) -1 #For Getting -1 cuz array starts from 0
   board[position] = player
   display_board()
@@ -151,7 +158,7 @@ def check_diagnals():
 
 def check_if_tie():
   global game_still_going
-  
+
   if "-" not in board:
     game_still_going = False
   return 
