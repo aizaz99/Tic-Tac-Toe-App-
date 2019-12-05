@@ -67,21 +67,39 @@ def check_if_win():
   column_winner = check_columns()
   #checkdiagnalos
   diagnal_winner = check_diagnals()
-   if row_winner:
+  if row_winner:
      #there was a winner
      winner = row_winer()
-    elif: column_winner:
+  elif column_winner:
       winner = column_winner()
       #there was a winner
-    elif: diagnal_winner:
+  elif diagnal_winner:
       winner = diagnal_winner()
       #there was a winner
-    else:
+  else:
       winner = None
   return 
 
 def check_rows():
-  
+  #Set up global Variables
+  global game_still_going
+
+  #check if rows have same value but not dash
+  row1 = board[0] == board[1] == board[2] != "-"
+  row2 = board[3] == board[4] == board[5] != "-"
+  row3 = board[6] == board[7] == board[8] != "-"
+   
+   #if any row has flag return win
+  if row1 or row2 or row3:
+     game_still_going = False
+  #Return winner (X or O )
+  if row_1:
+    return board[0]
+  elif row2:
+    return board[3]
+  elif row3:
+    return board[6]
+
   return
 def check_columns():
   return
