@@ -57,6 +57,9 @@ def check_if_game_over():
 
 def check_if_win():
 
+#Set up global variable
+  global winner 
+
   #checkrows
   row_winer = check_rows()
 
@@ -64,9 +67,21 @@ def check_if_win():
   column_winner = check_columns()
   #checkdiagnalos
   diagnal_winner = check_diagnals()
+   if row_winner:
+     #there was a winner
+     winner = row_winer()
+    elif: column_winner:
+      winner = column_winner()
+      #there was a winner
+    elif: diagnal_winner:
+      winner = diagnal_winner()
+      #there was a winner
+    else:
+      winner = None
   return 
 
 def check_rows():
+  
   return
 def check_columns():
   return
