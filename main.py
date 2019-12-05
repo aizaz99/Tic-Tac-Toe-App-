@@ -49,7 +49,7 @@ def handle_turn(player):
   position = input(" Choose a position from 1 - 9: ")
 
 
-  if position not in ["1","2", "3","4","5","6","7","8","9"]:
+  while position not in ["1","2", "3","4","5","6","7","8","9"]:
     position = input(" Invalid,  Choose a position from 1 - 9: ")
     
   position = int(position) -1 #For Getting -1 cuz array starts from 0
